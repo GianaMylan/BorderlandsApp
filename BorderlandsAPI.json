@@ -1,0 +1,192 @@
+/*in Controller instead of .save use .saveAll and make a controller for it to save mutiple 
+JSON entries at once */
+
+Borderlands 3 - Main Campaign 
+    Protagonists
+        Vault Hunters { Name, Class, Gender, Race, Affiliation, Skills, (if time allows image) }
+            Amara
+                {
+                    "name": "Amara",
+                    "class": "Siren", 
+                    "gender": "female",
+                    "race": "human",
+                    "affilition": "Crimson Raiders",
+                    "skills": "Phasegrasp, Phasecast, Phaseslam" 
+                }, 
+            Fl4k
+                {
+                    "name": "Fl4k",
+                    "class": "Beastmaster", 
+                    "gender": "Non-Binary",
+                    "race": "n/a",
+                    "affilition": "Crimson Raiders",
+                    "skills": "Fade Away, Gamma Burst, Gravity Share, Rakk Attack" 
+                },
+            Moze
+                {
+                    "name": "Moze",
+                    "class": "Gunner", 
+                    "gender": "Female",
+                    "race": "Human",
+                    "affilition": "Crimson Raiders, Valdof(formerly)",
+                    "skills": "Shield of Retribution, Bottomless Mags, Demolition Woman, Bear Mother" 
+                },
+            Zane
+                {
+                    "name": "Zane Flynt",
+                    "class": " ", 
+                    "gender": "Male",
+                    "race": "Human",
+                    "affilition": "Crimson Raiders",
+                    "skills": "Digi-CLone, SNTNL, Barrier, MNTIS Shoulder Cannon" 
+                },
+        
+        Main NPCs { Name, Gender, Affiliation, (if time allows image) }
+            Lilith 
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Patricia Tannis
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Marcus
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Clay
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Maya
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Sir Hammerlock
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Tina 
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Typhon DeLeon
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Zer0
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Wainwright Jakobs
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Vaughn
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Mr. Torgue
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Rhys
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Mad Moxxi 
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Brick
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            BALEX
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            Claptrap
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+
+    Antagonists
+        Children of the Vault: Notable Members { Name, Gender, Race, Affiliation, Skills, Dedicated loot drops (yes/no) (if time allows image) }
+            Tyreen Calypso
+            Troy Calypso
+            Mouthpiece
+            Killavolt
+            Pain and Terror
+            Road Dog 
+            Aurelia
+        
+        Hyperion { General information }
+        Maliwan: Notable Members { Name, Gender, Race, Affiliation, Dedicated Loot drops(yes/no), (image if time allows) }
+            Captain Traunt
+            General Traunt 
+            Gigamind 
+            Katagawa Ball
+            Katagawa Jr. 
+            Wotan the Invincible
+
+    Creatures { type, planet location, badasses(yes/no), elemental variants(yes/no), (if time allows image) }
+        Skags
+        Spiderants
+        Rakk
+        Varkids
+        Ratch
+        Jabbers
+        Saurians
+        Nekrobugs
