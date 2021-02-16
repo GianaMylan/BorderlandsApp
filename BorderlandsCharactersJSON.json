@@ -1,0 +1,335 @@
+ 
+ Controller instead of .save use .saveAll and make a controller for it to save mutiple 
+JSON entries at once
+
+//Borderlands 3 - Main Campaign 
+  //  Protagonists
+    //    Vault Hunters { Name, Class, Gender, Race, Affiliation, Skills, (if time allows image) }
+            // Amara
+                {
+                    "name": "Amara",
+                    "class": "Siren", 
+                    "gender": "female",
+                    "race": "human",
+                    "planet": "Partali",
+                    "affilition": "Crimson Raiders",
+                    "skills": "Phasegrasp, Phasecast, Phaseslam" 
+                }, 
+            // Fl4k
+                {
+                    "name": "Fl4k",
+                    "class": "Beastmaster", 
+                    "gender": "Non-Binary",
+                    "race": "n/a",
+                    "planet": " ",
+                    "affilition": "Crimson Raiders",
+                    "skills": "Fade Away, Gamma Burst, Gravity Share, Rakk Attack" 
+                },
+            // Moze
+                {
+                    "name": "Moze",
+                    "class": "Gunner", 
+                    "gender": "Female",
+                    "race": "Human",
+                    "planet": " ",
+                    "affilition": "Crimson Raiders, Valdof(formerly)",
+                    "skills": "Shield of Retribution, Bottomless Mags, Demolition Woman, Bear Mother" 
+                },
+            // Zane
+                {
+                    "name": "Zane Flynt",
+                    "class": "Operative", 
+                    "gender": "Male",
+                    "race": "Human",
+                    "planet": " ",
+                    "affilition": "Crimson Raiders",
+                    "skills": "Digi-CLone, SNTNL, Barrier, MNTIS Shoulder Cannon" 
+                },
+        
+        // Main NPCs { Name, Gender, Affiliation, (if time allows image) }
+        //     Lilith 
+                {
+                    "name": "Lilith", 
+                    "gender": "Female", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": "Crimson Lance, Crimson Raiders",
+                    "image": " "
+                },
+            // Patricia Tannis
+                {
+                    "name": "Dr. Patricia Tannis", 
+                    "gender": "Female", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": "Crimson Lance, Crimson Raiders",
+                    "image": " "
+                },
+            // Marcus
+                {
+                    "name": "Marcus", 
+                    "gender": "Male",
+                    "race": "",
+                    "planet": " ", 
+                    "affiliation": "Crimson Lance, Crimson Raiders",
+                    "image": " "
+                },
+            // Clay
+                {
+                    "name": "Clay", 
+                    "gender": " ",
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Maya
+                {
+                    "name": "Maya", 
+                    "gender": "Female", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": "Crimson Raiders",
+                    "image": " "
+                },
+            // Sir Hammerlock
+                {
+                    "name": "Sir Alistair Hammerlock", 
+                    "gender": "Male", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Tina 
+                {
+                    "name": "Tina", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Typhon DeLeon
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Zer0
+                {
+                    "name": "Zer0", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Wainwright Jakobs
+                {
+                    "name": "Wainwright Jakobs", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Vaughn
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Mr. Torgue
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Rhys
+                {
+                    "name": " ", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Mad Moxxi 
+                {
+                    "name": "Mad Moxxi", 
+                    "gender": " ",
+                    "race": "",
+                    "planet": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Brick
+                {
+                    "name": "Brick", 
+                    "gender": " ",
+                    "race": "",
+                    "planet": " ", 
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // BALEX
+                {
+                    "name": "BALEX", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+            // Claptrap
+                {
+                    "name": "Cl4pTr4p", 
+                    "gender": " ", 
+                    "race": "",
+                    "planet": " ",
+                    "affiliation": " ",
+                    "image": " "
+                },
+
+    Antagonists
+        Children of the Vault: Notable Members { Name, Gender, Race, Affiliation, Skills, Dedicated loot drops (yes/no) (if time allows image) }
+            Tyreen Calypso
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Troy Calypso
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Mouthpiece
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Killavolt
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Pain and Terror
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Road Dog 
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Aurelia
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+        
+        Hyperion { General information }
+        Maliwan: Notable Members { Name, Gender, Race, Affiliation, Dedicated Loot drops(yes/no), (image if time allows) }
+            Captain Traunt
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            General Traunt 
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Gigamind 
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Katagawa Ball
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Katagawa Jr. 
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+            Wotan the Invincible
+            {
+                "name": " ", 
+                "gender": " ", 
+                "race": "",
+                "planet": " ",
+                "affiliation": " ",
+                "image": " "
+            },
+
+    Creatures { type, planet location, badasses(yes/no), elemental variants(yes/no), (if time allows image) }
+        Skags
+        Spiderants
+        Rakk
+        Varkids
+        Ratch
+        Jabbers
+        Saurians
+        Nekrobugs
