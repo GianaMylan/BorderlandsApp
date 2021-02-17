@@ -2,9 +2,7 @@ package com.example.server.controller;
 import com.example.server.model.Characters;
 import com.example.server.service.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/characters")
@@ -16,8 +14,12 @@ public class CharacterController {
     CharacterService characterService;
 
     @GetMapping
-    public String sayHello() {
-        return "hey you accessed the root url of characters";
+    public Iterable<Characters> getCharacters() {
+        return characterService.getCharacters();
     }
 
+    @PostMapping
+    public Characters createCharacter(@RequestBody Characters characters) {
+        return characterService.createCharacter(characters);
+    }
 }

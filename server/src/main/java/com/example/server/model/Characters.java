@@ -26,6 +26,9 @@ public class Characters {
     @Column
     private String image;
 
+    public Characters() {
+    }
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

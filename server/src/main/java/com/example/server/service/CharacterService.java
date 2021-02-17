@@ -9,4 +9,5 @@ public interface CharacterService {
     Characters createCharacter(Characters characters);
     Characters updateCharacter(Characters characters);
     HttpStatus deleteCharacter(Long id);
+
 }
