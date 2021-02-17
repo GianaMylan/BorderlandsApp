@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 //http://localhost:8080/characters
 
 public class CharacterController {
-    CharacterController characterController;
+
     @Autowired
     CharacterService characterService;
 

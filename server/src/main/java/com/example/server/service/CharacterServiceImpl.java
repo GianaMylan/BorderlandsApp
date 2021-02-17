@@ -3,7 +3,9 @@ import  com.example.server.model.Characters;
 import com.example.server.repository.CharacterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CharacterServiceImpl implements CharacterService {
 
     @Autowired
@@ -16,7 +18,7 @@ public class CharacterServiceImpl implements CharacterService {
 
     @Override
     public Characters createCharacter(Characters characters) {
-        return characterRepository.saveAll(characters);
+        return characterRepository.save(characters);
     }
 
     @Override
