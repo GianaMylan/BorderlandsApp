@@ -1,18 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"
+import Characters from './components/Characters';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> Borderlands 3</h1>
-        <h2> Let the Mayhem Begin!</h2>
-      </header>
-      <div>
-        
-      </div>
-    </div>
+    <Router>
+        <nav>
+          <ul>  
+            <Link to="/"> Home </Link>
+            <Link to="Characters"> Characters</Link>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/Characters" exact component={Characters} />
+          <Route path="/" exact component={Home} />
+        </Switch>
+    </Router>
+
   );
-}
+
+  function Home() {
+    return (
+      <div>
+        <p> this is the home page </p>
+      </div>
+    )
+  }
+} // end of the main App 
+
 
 export default App;
