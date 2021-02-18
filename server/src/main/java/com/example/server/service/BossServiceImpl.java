@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class BossServiceImpl {
+public class BossServiceImpl implements BossService{
 
     @Autowired
     BossRepository bossRepository;
@@ -24,7 +24,7 @@ public class BossServiceImpl {
     }
 
     @Override
-    Bosses updateBoss(Bosses bosses) {
+    public Bosses updateBoss(Bosses bosses) {
         return bossRepository.save(bosses);
     }
 
