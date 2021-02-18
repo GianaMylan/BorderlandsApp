@@ -14,21 +14,22 @@ public class CreatureServiceImpl implements CreatureService {
 
     @Override
     public Iterable<Creatures> getCreatures() {
-        return null;
+        return creatureRepository.findAll();
     }
 
     @Override
     public Creatures createCreature(Creatures creatures) {
-        return null;
+        return creatureRepository.save(creatures);
     }
 
     @Override
     public Creatures updateCreature(Creatures creatures) {
-        return null;
+        return creatureRepository.save(creatures);
     }
 
     @Override
     public HttpStatus deleteCreature(Long id) {
-        return null;
+        creatureRepository.deleteById(id);
+        return HttpStatus.OK;
     }
 }
