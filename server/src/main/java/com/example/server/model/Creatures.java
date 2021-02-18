@@ -8,6 +8,7 @@ public class Creatures {
 
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -24,7 +25,6 @@ public class Creatures {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -32,7 +32,6 @@ public class Creatures {
     public String getSpecies() {
         return species;
     }
-
     public void setSpecies(String species) {
         this.species = species;
     }
@@ -40,7 +39,6 @@ public class Creatures {
     public Boolean getBadasses() {
         return badasses;
     }
-
     public void setBadasses(Boolean badasses) {
         this.badasses = badasses;
     }
@@ -48,7 +46,6 @@ public class Creatures {
     public Boolean getElemental_variants() {
         return elemental_variants;
     }
-
     public void setElemental_variants(Boolean elemental_variants) {
         this.elemental_variants = elemental_variants;
     }
