@@ -1,8 +1,8 @@
 package com.example.server.controller;
 
-
 import com.example.server.model.Creatures;
 import com.example.server.service.CreatureService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 //http://localhost:8080/creatures
 
 public class CreatureController {
+
+    @Autowired
     CreatureService creatureService;
 
     @GetMapping
