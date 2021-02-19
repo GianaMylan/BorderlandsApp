@@ -32,10 +32,10 @@ public class CharacterController {
     @PatchMapping("/{id}")
     public Characters updateCharacter(@RequestBody Characters characters) {
         return characterService.updateCharacter(characters);
-    }
+    } // need to make sure the IDs will not change
 
     @DeleteMapping("/{id}")
     public HttpStatus deleteCharacter(@PathVariable Long character_id) {
         return characterService.deleteCharacter(character_id);
-    } // how do I get the IDs to not change?
+    }
 }
