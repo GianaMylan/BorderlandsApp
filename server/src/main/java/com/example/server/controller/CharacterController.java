@@ -29,7 +29,7 @@ public class CharacterController {
         return characterService.updateCharacter(characters);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public HttpStatus deleteCharacter(@RequestParam Long id) {
         return characterService.deleteCharacter(id);
     }

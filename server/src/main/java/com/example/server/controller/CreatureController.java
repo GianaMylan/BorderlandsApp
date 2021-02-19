@@ -20,12 +20,17 @@ public class CreatureController {
         return creatureService.getCreatures();
     }
 
+    @GetMapping
+    public Creatures getCreatureById(@PathVariable Long id) {
+        return creatureService.findCreatureById(id);
+    }
+
     @PostMapping
     public Creatures createCreature(@RequestBody Creatures creatures) {
         return creatureService.createCreature(creatures);
     }
 
-    @PatchMapping
+    @PatchMapping("/{id}")
     public Creatures updateCreature(@RequestBody Creatures creatures) {
         return creatureService.updateCreature(creatures);
     }

@@ -18,6 +18,11 @@ public class CreatureServiceImpl implements CreatureService {
     }
 
     @Override
+    public Creatures findCreatureById(Long id) {
+        return creatureRepository.findById(id).get();
+    }
+
+    @Override
     public Creatures createCreature(Creatures creatures) {
         return creatureRepository.save(creatures);
     }
