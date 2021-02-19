@@ -20,8 +20,8 @@ public class CharacterController {
     }
 
     @GetMapping("/{id}")
-    public Characters findCharacterById(@PathVariable Long id) {
-        return characterService.findCharacterById(id);
+    public Characters findCharacterById(@PathVariable Long character_id) {
+        return characterService.findCharacterById(character_id);
     }
 
     @PostMapping
@@ -35,7 +35,7 @@ public class CharacterController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpStatus deleteCharacter(@PathVariable Long id) {
-        return characterService.deleteCharacter(id);
+    public HttpStatus deleteCharacter(@PathVariable Long character_id) {
+        return characterService.deleteCharacter(character_id);
     } // how do I get the IDs to update?
 }

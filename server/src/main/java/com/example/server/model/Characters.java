@@ -9,7 +9,7 @@ public class Characters {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long character_id;
 
     @Column
     private String name;

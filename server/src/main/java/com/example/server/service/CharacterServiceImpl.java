@@ -17,8 +17,8 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
-    public Characters findCharacterById(Long id) {
-        return characterRepository.findById(id).get();
+    public Characters findCharacterById(Long character_id) {
+        return characterRepository.findById(character_id).get();
     }
 
     @Override
@@ -32,8 +32,8 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
-    public HttpStatus deleteCharacter(Long id) {
-        characterRepository.deleteById(id);
+    public HttpStatus deleteCharacter(Long character_id) {
+        characterRepository.deleteById(character_id);
         return HttpStatus.OK;
     }
 }
