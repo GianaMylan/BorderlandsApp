@@ -15,7 +15,7 @@ public class CreatureController {
     @Autowired
     CreatureService creatureService;
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Iterable<Creatures> getCreatures() {
         return creatureService.getCreatures();
     }

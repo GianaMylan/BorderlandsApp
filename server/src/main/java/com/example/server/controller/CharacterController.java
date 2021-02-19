@@ -19,6 +19,11 @@ public class CharacterController {
         return characterService.getCharacters();
     }
 
+    @GetMapping("{id}")
+    public Characters findCharacterById(Long id) {
+        return characterService.findCharacterById(id);
+    }
+
     @PostMapping
     public Characters createCharacter(@RequestBody Characters characters) {
         return characterService.createCharacter(characters);
