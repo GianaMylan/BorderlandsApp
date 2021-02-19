@@ -15,12 +15,12 @@ public class CreatureController {
     @Autowired
     CreatureService creatureService;
 
-    @GetMapping("/{id}")
+    @GetMapping
     public Iterable<Creatures> getCreatures() {
         return creatureService.getCreatures();
     }
 
-    @GetMapping
+    @GetMapping ("/{id}")
     public Creatures getCreatureById(@PathVariable Long id) {
         return creatureService.findCreatureById(id);
     }
@@ -35,7 +35,7 @@ public class CreatureController {
         return creatureService.updateCreature(creatures);
     }
 
-    @DeleteMapping
+    @DeleteMapping ("/{id}")
     public HttpStatus deleteCreature(@RequestParam Long id) {
         return creatureService.deleteCreature(id);
     }
