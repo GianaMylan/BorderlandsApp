@@ -9,7 +9,7 @@ public class Creatures {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long creature_id;
 
     @Column
     private String species;
@@ -23,10 +23,10 @@ public class Creatures {
     }
 
     public Long getId() {
-        return id;
+        return creature_id;
     }
     public void setId(Long id) {
-        this.id = id;
+        this.creature_id = id;
     }
 
     public String getSpecies() {

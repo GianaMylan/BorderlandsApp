@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 
 public interface CreatureService {
     Iterable<Creatures> getCreatures();
-    Creatures findCreatureById(Long id);
+    Creatures findCreatureById(Long creature_id);
     Creatures createCreature(Creatures creatures);
     Creatures updateCreature(Creatures creatures);
-    HttpStatus deleteCreature( Long id);
+    HttpStatus deleteCreature( Long creature_id);
 
 }

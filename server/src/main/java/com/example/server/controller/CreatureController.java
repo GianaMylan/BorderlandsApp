@@ -21,8 +21,8 @@ public class CreatureController {
     }
 
     @GetMapping ("/{id}")
-    public Creatures getCreatureById(@PathVariable Long id) {
-        return creatureService.findCreatureById(id);
+    public Creatures getCreatureById(@PathVariable Long creature_id) {
+        return creatureService.findCreatureById(creature_id);
     }
 
     @PostMapping
@@ -36,7 +36,7 @@ public class CreatureController {
     }
 
     @DeleteMapping ("/{id}")
-    public HttpStatus deleteCreature(@RequestParam Long id) {
-        return creatureService.deleteCreature(id);
+    public HttpStatus deleteCreature(@RequestParam Long creature_id) {
+        return creatureService.deleteCreature(creature_id);
     }
 }
