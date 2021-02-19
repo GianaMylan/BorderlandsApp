@@ -19,8 +19,8 @@ public class BossServiceImpl implements BossService{
     }
 
     @Override
-    public Bosses findBossById(Long id) {
-        return bossRepository.findById(id).get();
+    public Bosses findBossById(Long boss_id) {
+        return bossRepository.findById(boss_id).get();
     }
 
     @Override
@@ -34,8 +34,8 @@ public class BossServiceImpl implements BossService{
     }
 
     @Override
-    public HttpStatus deleteBoss(Long id) {
-        bossRepository.deleteById(id);
+    public HttpStatus deleteBoss(Long boss_id) {
+        bossRepository.deleteById(boss_id);
         return HttpStatus.OK;
     }
 

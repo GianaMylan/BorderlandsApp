@@ -18,8 +18,8 @@ public class CreatureServiceImpl implements CreatureService {
     }
 
     @Override
-    public Creatures findCreatureById(Long id) {
-        return creatureRepository.findById(id).get();
+    public Creatures findCreatureById(Long creature_id) {
+        return creatureRepository.findById(creature_id).get();
     }
 
     @Override
@@ -33,8 +33,8 @@ public class CreatureServiceImpl implements CreatureService {
     }
 
     @Override
-    public HttpStatus deleteCreature(Long id) {
-        creatureRepository.deleteById(id);
+    public HttpStatus deleteCreature(Long creature_id) {
+        creatureRepository.deleteById(creature_id);
         return HttpStatus.OK;
     }
 }

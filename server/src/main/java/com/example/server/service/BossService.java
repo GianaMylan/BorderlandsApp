@@ -5,8 +5,8 @@ import org.springframework.http.HttpStatus;
 
 public interface BossService {
     Iterable<Bosses> getBosses();
-    Bosses findBossById(Long id);
+    Bosses findBossById(Long boss_id);
     Bosses createBoss(Bosses bosses);
     Bosses updateBoss(Bosses bosses);
-    HttpStatus deleteBoss(Long id);
+    HttpStatus deleteBoss(Long boss_id);
 }

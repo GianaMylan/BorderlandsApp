@@ -19,8 +19,8 @@ public class BossController {
     }
 
     @GetMapping("/{id}")
-    public Bosses findBossById(@PathVariable Long id) {
-        return bossService.findBossById(id);
+    public Bosses findBossById(@PathVariable Long boss_id) {
+        return bossService.findBossById(boss_id);
     }
 
     @PostMapping
@@ -34,7 +34,7 @@ public class BossController {
     }
 
     @DeleteMapping("/{id}")
-    public HttpStatus deleteBoss(@RequestParam Long id) {
-        return bossService.deleteBoss(id);
+    public HttpStatus deleteBoss(@RequestParam Long boss_id) {
+        return bossService.deleteBoss(boss_id);
     }
 }

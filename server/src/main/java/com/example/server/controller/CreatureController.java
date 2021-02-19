@@ -33,10 +33,10 @@ public class CreatureController {
     @PatchMapping("/{id}")
     public Creatures updateCreature(@RequestBody Creatures creatures) {
         return creatureService.updateCreature(creatures);
-    }
+    } // need to make sure the IDs will not change
 
     @DeleteMapping ("/{id}")
-    public HttpStatus deleteCreature(@RequestParam Long creature_id) {
+    public HttpStatus deleteCreature(@PathVariable Long creature_id) {
         return creatureService.deleteCreature(creature_id);
     }
 }

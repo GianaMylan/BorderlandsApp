@@ -9,7 +9,7 @@ public class Bosses {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long boss_id;
 
     @Column
     private String name;
@@ -23,6 +23,14 @@ public class Bosses {
     private Boolean dedicated_loot_drop;
 
     public Bosses() {
+    }
+
+    public Long getBoss_id() {
+        return boss_id;
+    }
+
+    public void setBoss_id(Long boss_id) {
+        this.boss_id = boss_id;
     }
 
     public String getName() {
