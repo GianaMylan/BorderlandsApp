@@ -17,6 +17,11 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
+    public Characters findCharacterById(Long id) {
+        return characterRepository.findById(id).get();
+    }
+
+    @Override
     public Characters createCharacter(Characters characters) {
         return characterRepository.save(characters);
     }
