@@ -19,6 +19,11 @@ public class BossServiceImpl implements BossService{
     }
 
     @Override
+    public Bosses findBossById(Long id) {
+        return bossRepository.findById(id).get();
+    }
+
+    @Override
     public Bosses createBoss(Bosses bosses) {
         return bossRepository.save(bosses);
     }

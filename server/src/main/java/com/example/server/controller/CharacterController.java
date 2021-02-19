@@ -29,7 +29,7 @@ public class CharacterController {
         return characterService.createCharacter(characters);
     }
 
-    @PatchMapping
+    @PatchMapping("/{id}")
     public Characters updateCharacter(@RequestBody Characters characters) {
         return characterService.updateCharacter(characters);
     }
