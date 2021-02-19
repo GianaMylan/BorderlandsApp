@@ -18,17 +18,22 @@ public class BossController {
         return bossService.getBosses();
     }
 
+    @GetMapping("/{id}")
+    public Bosses findBossById(@PathVariable Long id) {
+        return bossService.findBossById(id);
+    }
+
     @PostMapping
     public Bosses createBosses(@RequestBody Bosses bosses) {
         return bossService.createBoss(bosses);
     }
 
-    @PatchMapping
+    @PatchMapping("{id}")
     public Bosses updateBosses(@RequestBody Bosses bosses) {
         return bossService.updateBoss(bosses);
     }
 
-    @DeleteMapping
+    @DeleteMapping("{id}")
     public HttpStatus deleteBosses(@RequestParam Long id) {
         return bossService.deleteBoss(id);
     }
