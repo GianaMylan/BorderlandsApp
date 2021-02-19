@@ -37,5 +37,5 @@ public class CharacterController {
     @DeleteMapping("/{id}")
     public HttpStatus deleteCharacter(@PathVariable Long character_id) {
         return characterService.deleteCharacter(character_id);
-    } // how do I get the IDs to update?
+    } // how do I get the IDs to not change?
 }
