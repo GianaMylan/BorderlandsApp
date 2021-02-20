@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 public interface CharacterService {
 
     Iterable<Characters> getCharacters();
-    Characters findCharacterById(Long character_id);
+    Characters findCharacterById(Long characterId);
     Characters createCharacter(Characters characters);
     Characters updateCharacter(Characters characters);
-    HttpStatus deleteCharacter(Long character_id);
+    HttpStatus deleteCharacter(Long characterId);
 
 }

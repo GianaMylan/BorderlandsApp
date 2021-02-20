@@ -20,8 +20,8 @@ public class CharacterController {
     }
 
     @GetMapping("/{id}")
-    public Characters findCharacterById(@PathVariable Long character_id) {
-        return characterService.findCharacterById(character_id);
+    public Characters findCharacterById(@PathVariable Long characterId) {
+        return characterService.findCharacterById(characterId);
     }
 
     @PostMapping
@@ -35,7 +35,7 @@ public class CharacterController {
     } // need to make sure the IDs will not change
 
     @DeleteMapping("/{id}")
-    public HttpStatus deleteCharacter(@PathVariable Long character_id) {
-        return characterService.deleteCharacter(character_id);
+    public HttpStatus deleteCharacter(@PathVariable Long characterId) {
+        return characterService.deleteCharacter(characterId);
     }
 }

@@ -9,7 +9,7 @@ public class Characters {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long character_id;
+    private Long characterId;
 
     @Column
     private String name;
@@ -29,8 +29,8 @@ public class Characters {
     public Characters() {
     }
 
-    public Long getId() { return character_id; }
-    public void setId(Long id) { this.character_id = id; }
+    public Long getId() { return characterId; }
+    public void setId(Long characterId) { this.characterId = characterId; }
 
     public String getName() { return name; }
     public void setName(String name) {this.name = name; }
