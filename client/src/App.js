@@ -13,8 +13,10 @@ function App() {
     <Router>
         <nav>
           <ul>  
-            <Link to="/"> Home </Link>
-            <Link to="Characters"> Characters</Link>
+            <Link className="Link" to="/"> Home </Link>
+            <Link className="Link" to="Characters"> Characters</Link>
+            <Link className="Link" to="Bosses"> Bosses</Link>
+            <Link className="Link" to="Creatures"> Creatures </Link>
           </ul>
         </nav>
         <Switch>
