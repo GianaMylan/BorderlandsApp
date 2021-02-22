@@ -8,27 +8,45 @@ body {
   justify-items: space-around;
 }
 
+nav {
+  display: flex;
+  flex: inline;
+  justify-content: space-around;
+  background-color: rgb(235, 122, 30);
+}
+ul{
+  justify-items: space-around;
+}
+
 .Link {
   color: whitesmoke;
+  font-size: 16pt;
 }
 
 .Link:visited {
-  color: red;
+  color: rgb(47, 0, 255);
   
 }
 
 .Link:hover {
-  content: "";
-  background: rgb(255, 230, 0);
-	mix-blend-mode: exclusion;
-  width: calc(100% + 20px);
-  height: 0;
-  position: absolute;
-  bottom: -4px;
-  left: -10px;
-	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  color: #FFFFFF;
+  text-decoration: none;
+  text-shadow: #fffc66 0 0 15px, #fffc66 0 0 15px, #fffc66 0 0 15px, #fffc66 0 0 15px, #fffc66 0 0 15px, #fffc66 0 0 15px, #fffc66 0 0 15px;
+  transition: all 0.5s ease-in;
 }
 
 .Link:active {
   color: whitesmoke;
+}
+
+.searchBar {
+  margin: 13pt;
+}
+
+.footer {
+  font-size: 9pt;
+  text-align: center;
+  justify-items: space-between;
+  word-spacing: 5px;
+  letter-spacing: 2px;
 }
