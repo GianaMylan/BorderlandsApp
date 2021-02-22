@@ -33,8 +33,8 @@ public class BossController {
         return bossService.updateBoss(bosses);
     }
 
-    @DeleteMapping("/{id}")
-    public HttpStatus deleteBoss(@RequestParam Long boss_id) {
+    @DeleteMapping("/{boss_id}")
+    public HttpStatus deleteBoss(@PathVariable Long boss_id) {
         return bossService.deleteBoss(boss_id);
     }
 }
