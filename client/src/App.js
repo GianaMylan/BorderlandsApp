@@ -39,7 +39,7 @@ function App() {
   function Home() {
     return (  
         <header>
-          <a className="sprite-nav-logo" href="/en-US/"></a>
+
           <div>
             <p> this is the home page </p>
           </div>

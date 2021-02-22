@@ -79,6 +79,65 @@ function Characters () {
                 characters && characters.map(character => < Characters character={ character } selectCharacter={ selectCharacter } deleteCharacter={ deleteCharacter } />)
             } 
             </div>
+
+            <div>
+                <h2> Add a playable character </h2>
+                <form className="newCharacterForm"
+                onChange={ (e) => handleChange(e) }
+                onSubmit= { (e) => handleSubmit(e) }>
+                    <label> Name: 
+                        <input type="text" name="name" />
+                    </label>
+                    <label> Gender: 
+                        <input type="text" name="name" />
+                    </label>
+                    <label> Race: 
+                        <input type="text" name="name" />
+                    </label>
+                    <label> Planet: 
+                        <input type="text" name="name" />
+                    </label>
+                    <label> Affiliation: 
+                        <input type="text" name="name" />
+                    </label>
+                    <label> Skills: 
+                        <input type="text" name="name" />
+                        <input type="text" name="name" />
+                        <input type="text" name="name" />
+                        <input type="text" name="name" />
+                    </label>
+                    <input type="submit" value="Add New"/>
+                </form>
+
+                {
+                    selectCharacter && <form 
+                    onChange= { (e) => handleChange(e) }
+                    onSubmit= { (e) => handleSubmit(e) }>
+                        <label> Name: 
+                            <input type="text" name="name" />
+                        </label>
+                        <label> Gender: 
+                            <input type="text" name="name" />
+                        </label>
+                        <label> Race: 
+                            <input type="text" name="name" />
+                        </label>
+                        <label> Planet: 
+                            <input type="text" name="name" />
+                        </label>
+                        <label> Affiliation: 
+                            <input type="text" name="name" />
+                        </label>
+                        <label> Skills: 
+                            <input type="text" name="name" />
+                            <input type="text" name="name" />
+                            <input type="text" name="name" />
+                            <input type="text" name="name" />
+                        </label>
+                        <input type="sumbit" value="Patch it Up" />
+                    </form>
+                }
+            </div>
             <div className="footer">
                 <footer> Made By : Giana Mylan </footer>
             </div>
