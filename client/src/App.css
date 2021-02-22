@@ -43,6 +43,15 @@ ul{
   margin: 13pt;
 }
 
+.pageTitle {
+  font-size: 24pt;
+  text-align: center;
+}
+
+.render {
+  color: aliceblue;
+}
+
 .footer {
   font-size: 9pt;
   text-align: center;

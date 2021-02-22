@@ -73,10 +73,12 @@ function Characters () {
 
     return (
         <div> {/* largest container inlcuding the title of page and footer */}  
-            <div className="pageTitle"> Characters </div>            
+            <div className="pageTitle"> Characters </div>  
+            <div className="render" key="characters">          
             {
-                characters && characters.map(character => <Characters character={ character } selectCharacter={ selectCharacter } deleteCharacter={ deleteCharacter } />)
+                characters && characters.map(character => < Characters character={ character } selectCharacter={ selectCharacter } deleteCharacter={ deleteCharacter } />)
             } 
+            </div>
             <div className="footer">
                 <footer> Made By : Giana Mylan </footer>
             </div>
