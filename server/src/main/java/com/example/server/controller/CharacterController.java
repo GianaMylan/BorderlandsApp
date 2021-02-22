@@ -19,7 +19,7 @@ public class CharacterController {
         return characterService.getCharacters();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{characterId}")
     public Characters findCharacterById(@PathVariable Long characterId) {
         return characterService.findCharacterById(characterId);
     }
@@ -29,12 +29,12 @@ public class CharacterController {
         return characterService.createCharacter(characters);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping("/{characterId}")
     public Characters updateCharacter(@RequestBody Characters characters) {
         return characterService.updateCharacter(characters);
     } // need to make sure the IDs will not change
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{characterId}")
     public HttpStatus deleteCharacter(@PathVariable Long characterId) {
         return characterService.deleteCharacter(characterId);
     }
