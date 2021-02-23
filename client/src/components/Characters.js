@@ -27,7 +27,7 @@ function Characters () {
     }
 
     function handleSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         createCharacter();
     }
 
