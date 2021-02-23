@@ -97,7 +97,8 @@ function Bosses () {
                     </label>
                     <label> Affiliation: 
                         <input type="text" name="name" />
-                    </label>                    
+                    </label>
+                    <input type="submit" value="Add New" />                    
                 </form>
                 {
                     selectedBoss && <form
