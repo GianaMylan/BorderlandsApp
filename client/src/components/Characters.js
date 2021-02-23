@@ -89,19 +89,19 @@ function Characters () {
                         <input type="text" name="name" />
                     </label>
                     <label> Gender: 
-                        <input type="text" name="name" />
+                        <input type="text" name="gender" />
                     </label>
                     <label> Race: 
-                        <input type="text" name="name" />
+                        <input type="text" name="race" />
                     </label>
                     <label> Planet: 
-                        <input type="text" name="name" />
+                        <input type="text" name="planet" />
                     </label>
                     <label> Affiliation: 
-                        <input type="text" name="name" />
+                        <input type="text" name="affiliation" />
                     </label>
                     <label> Skills: 
-                        <input type="text" name="name" />
+                        <input type="text" name="skills" />
                     </label>
                     <input type="submit" value="Add New"/>
                 </form>
@@ -114,19 +114,19 @@ function Characters () {
                             <input type="text" name="name" defaultValue={ selectedCharacter.name } />
                         </label>
                         <label> Gender: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.gender }/>
+                            <input type="text" name="gender" defaultValue={ selectedCharacter.gender }/>
                         </label>
                         <label> Race: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.race } />
+                            <input type="text" name="race" defaultValue={ selectedCharacter.race } />
                         </label>
                         <label> Planet: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.planet } />
+                            <input type="text" name="planet" defaultValue={ selectedCharacter.planet } />
                         </label>
                         <label> Affiliation: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.affiliation } />
+                            <input type="text" name="affiliation" defaultValue={ selectedCharacter.affiliation } />
                         </label>
                         <label> Skills: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.skills } />
+                            <input type="text" name="skills" defaultValue={ selectedCharacter.skills } />
                         </label>
                         <input type="submit" value="Patch it Up" />
                     </form> }
