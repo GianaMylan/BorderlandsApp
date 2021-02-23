@@ -22,7 +22,7 @@ function App() {
           </ul>
           <div className="searchBar">
             <input type="text" /> 
-            <button> Search </button>
+            <input type="submit" value="Find it" />
           </div>
 
         </nav>

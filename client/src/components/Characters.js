@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -74,9 +73,9 @@ function Characters () {
     return (
         <div> {/* largest container inlcuding the title of page and footer */}  
             <div className="pageTitle"> Characters </div>  
-            <div className="render" key="characters">          
+            <div className="render" key={characters}>          
             {
-                characters && characters.map(character => < Characters character={ character } selectCharacter={ selectCharacter } deleteCharacter={ deleteCharacter } />)
+                characters && characters.map(character => < Character character={ character } selectCharacter={ selectCharacter } deleteCharacter={ deleteCharacter } />)
             } 
             </div>
 
@@ -110,38 +109,44 @@ function Characters () {
                 </form>
 
                 {
-                    selectCharacter && <form 
+                    selectedCharacter && <form 
                     onChange= { (e) => handleChange(e) }
                     onSubmit= { (e) => handleSubmit(e) }>
                         <label> Name: 
-                            <input type="text" name="name" />
+                            <input type="text" name="name" defaultValue={ selectedCharacter.name } />
                         </label>
                         <label> Gender: 
-                            <input type="text" name="name" />
+                            <input type="text" name="name" defaultValue={ selectedCharacter.gender }/>
                         </label>
                         <label> Race: 
-                            <input type="text" name="name" />
+                            <input type="text" name="name" defaultValue={ selectedCharacter.race } />
                         </label>
                         <label> Planet: 
-                            <input type="text" name="name" />
+                            <input type="text" name="name" defaultValue={ selectedCharacter.planet } />
                         </label>
                         <label> Affiliation: 
-                            <input type="text" name="name" />
+                            <input type="text" name="name" defaultValue={ selectedCharacter.affiliation } />
                         </label>
                         <label> Skills: 
-                            <input type="text" name="name" />
-                            <input type="text" name="name" />
-                            <input type="text" name="name" />
-                            <input type="text" name="name" />
+                            <input type="text" name="name" defaultValue={ selectedCharacter.skills } />
                         </label>
-                        <input type="sumbit" value="Patch it Up" />
-                    </form>
-                }
+                        <input type="submit" value="Patch it Up" />
+                    </form> }
             </div>
             <div className="footer">
                 <footer> Made By : Giana Mylan </footer>
             </div>
         </div> 
+    )
+}
+
+function Character({ character, selectCharacter, deleteCharacter }) {
+    return (
+        <div className="character" key={ character.id }>
+            <h3 className="full-name-description"> Character Name: </h3>
+            <button className="select-character-button" onClick= { () => selectCharacter(character) }> Edit </button>
+            <button onClick={ () => deleteCharacter( character.id) }> delete </button>
+        </div>
     )
 }
 
