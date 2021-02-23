@@ -52,7 +52,7 @@ function Characters () {
     }
 
     async function handleEditSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         try {
             const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/characters', selectedCharacter);
             console.log(res.data);
@@ -108,8 +108,8 @@ function Characters () {
 
                 {
                     selectedCharacter && <form 
-                    onChange= { (e) => handleChange(e) }
-                    onSubmit= { (e) => handleSubmit(e) }>
+                    onChange= { (e) => handleEditChange(e) }
+                    onSubmit= { (e) => handleEditSubmit(e) }>
                         <label> Name: 
                             <input type="text" name="name" defaultValue={ selectedCharacter.name } />
                         </label>
