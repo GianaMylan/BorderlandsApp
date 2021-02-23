@@ -2,11 +2,6 @@ body {
   background-color: black;
   color: whitesmoke;
 }
-#App-header {
-  display: flex;
-  font-size: 16pt;
-  justify-items: space-around;
-}
 
 nav {
   display: flex;

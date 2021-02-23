@@ -143,7 +143,8 @@ function Characters () {
 function Character({ character, selectCharacter, deleteCharacter }) {
     return (
         <div className="character" key={ character.id }>
-            <h3 className="full-name-description"> Character Name: </h3>
+            <h3 className="full-name-description"> {character.name} </h3>
+            <br></br>
             <button className="select-character-button" onClick= { () => selectCharacter(character) }> Edit </button>
             <button onClick={ () => deleteCharacter( character.id) }> delete </button>
         </div>
