@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Dropdown, {DropdownButton, ReactDropdownProps } from 'react-dropdown';
 import axios from 'axios';
+import "./Components.css"
 
 function Creatures () {
     const [creatures, setCreatures] = useState(null);
@@ -126,9 +126,9 @@ function Creature ({ creature, selectCreature, deleteCreature }) {
         <div className="characters" > 
             <h2 className="cratures" key={ creature.id }> { creature.species } </h2>
             <b> Badass Variants? </b> { creature.badasses } <br></br>
-            <b> Elemental Variants? </b> {creature.elemental_variants }
-            <button className="select-creature-button" onClick= { () => selectCreature(creature) }> Edit </button>
-            <button className="delete-creature-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>
+            <b> Elemental Variants? </b> {creature.elemental_variants } <br></br>
+            <button className="select-button" onClick= { () => selectCreature(creature) }> Edit </button>
+            <button className="delete-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>
         </div>
     )
 }

@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-.select-character-button, .delete-character-button {
+.select-button, .delete-button {
     background-color: aqua;
     border-radius: .25rem;
     border: double 2px rgb(255, 255, 255);

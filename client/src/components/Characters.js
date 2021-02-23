@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "./Characters.css";
+import "./Components.css";
 
 
 function Characters () {
@@ -147,8 +147,8 @@ function Character({ character, selectCharacter, deleteCharacter }) {
             <b> Origin Planet: </b>{ character.planet } <br></br>
             <b> Affiliation:  </b>{ character.affiliation}<br></br>
             <b> Skill trees: </b>{ character.skills }
-            <button className="select-character-button" onClick= { () => selectCharacter(character) }> Edit </button>
-            <button className="delete-character-button" onClick={ () => deleteCharacter( character.id) }> Delete </button>
+            <button className="select-button" onClick= { () => selectCharacter(character) }> Edit </button>
+            <button className="delete-button" onClick={ () => deleteCharacter( character.id) }> Delete </button>
         </div>
     )
 }
