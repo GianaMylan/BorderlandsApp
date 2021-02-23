@@ -31,6 +31,7 @@ function Bosses () {
     }
 
     async function createBoss() {
+        e.preventDefault();
         try {
             const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/bosses', form)
             setBosses([...bosses, res.data]);
@@ -62,6 +63,7 @@ function Bosses () {
     }
 
     async function deleteBoss(bossId) {
+        e.preventDefault();
         try {
             const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/bosses/' + bossId);
             console.log(res.data);

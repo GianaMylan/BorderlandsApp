@@ -31,6 +31,7 @@ function Creatures () {
     }
 
     async function createCreature() {
+        e.preventDefault();
         try {
             const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/creatures', form);
             setCreatures([...creatures, res.data]);
@@ -61,6 +62,7 @@ function Creatures () {
     }
 
     async function deleteCreature(creatureId) {
+        e.preventDefault();
         try {
             const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/creatures/' + creatureId);
             console.log(res.data);
