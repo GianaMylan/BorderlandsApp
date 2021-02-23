@@ -49,6 +49,7 @@ ul{
 
 .footer {
   font-size: 9pt;
+  position: relative;
   text-align: center;
   justify-items: space-between;
   word-spacing: 5px;

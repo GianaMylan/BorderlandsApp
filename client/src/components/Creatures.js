@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Dropdown, {DropdownButton, ReactDropdownProps } from 'react-dropdown';
 import axios from 'axios';
 
 function Creatures () {
@@ -52,7 +53,7 @@ function Creatures () {
     async function handleEditSubmit(e) {
         e.preventdefault();
         try {
-            const res = await axios.patch('http://localhost:8080/creatures', selectedCreatures);
+            const res = await axios.patch('http://localhost:8080/creatures', selectedCreature);
             console.log(res.data);
         } catch (e) {
             console.error(e, e.message);
@@ -88,28 +89,47 @@ function Creatures () {
                     </label>
                     <label>
                         Are there Badass Versions? 
-                        <DropdownButton id="dropdownButton">
-                            <Dropdown.ItemText> Yes </Dropdown.ItemText>
-                            <Dropdown.ItemText> No </Dropdown.ItemText>
-                        </DropdownButton>
+                        <input type="text" name="name" />
                     </label>
                     <label>
                         Do they have elemental Variety? 
-                        <DropdownButton id="dropdownButton">
-                            <Dropdown.ItemText> Yes </Dropdown.ItemText>
-                            <Dropdown.ItemText> No </Dropdown.ItemText>
-                        </DropdownButton>
+                        <input type="text" name="name" />
                     </label>
                 </form>
             </div>
-            
+            {
+                selectedCreature && <form
+                onChange={ (e) => handleChange(e)}
+                onSubmit={ (e) => handleSubmit(e)}>
+                    <label> Species:
+                        <input type="text" name="species" defaultValue={ selectedCreature.species } />
+                    </label>
+                    <label>
+                        Are there Badass Versions? 
+                        <input type="text" name="name" />
+                    </label>
+                    <label>
+                        Do they have elemental Variety? 
+                        <input type="text" name="name" />
+                    </label>
+                </form>
+            }
+            <div className="footer">
+                <footer> Made By : Giana Mylan </footer>
+            </div>
         </div>
     )
 }
 
 function Creature ({ creature, selectCreature, deleteCreature }) {
     return(
-        <div className="characters" > </div>
+        <div className="characters" > 
+            <h2 className="cratures" key={ creature.id }> { creature.species } </h2>
+            <b> Badass Variants? </b> { creature.badasses } <br></br>
+            <b> Elemental Variants? </b> {creature.elemental_variants }
+            <button className="select-creature-button" onClick= { () => selectCreature(creature) }> Edit </button>
+            <button className="delete-creature-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>
+        </div>
     )
 }
 
