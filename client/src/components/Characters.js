@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./Characters.css";
 
 
 function Characters () {
@@ -101,9 +102,6 @@ function Characters () {
                     </label>
                     <label> Skills: 
                         <input type="text" name="name" />
-                        <input type="text" name="name" />
-                        <input type="text" name="name" />
-                        <input type="text" name="name" />
                     </label>
                     <input type="submit" value="Add New"/>
                 </form>
@@ -142,11 +140,15 @@ function Characters () {
 
 function Character({ character, selectCharacter, deleteCharacter }) {
     return (
-        <div className="character" key={ character.id }>
-            <h3 className="full-name-description"> {character.name} </h3>
-            <br></br>
+        <div className="characters" key={ character.id }>
+            <h2 className="full-name-description"> {character.name} </h2>
+            <h3>{ character.gender} <br></br>
+            { character.race } <br></br>
+            { character.planet } <br></br>
+            {character.affiliation}<br></br>
+            { character.skills } </h3>
             <button className="select-character-button" onClick= { () => selectCharacter(character) }> Edit </button>
-            <button onClick={ () => deleteCharacter( character.id) }> delete </button>
+            <button className="delete-character-button" onClick={ () => deleteCharacter( character.id) }> Delete </button>
         </div>
     )
 }
