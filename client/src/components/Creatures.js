@@ -7,7 +7,7 @@ function Creatures () {
 
     async function getCreatures() {
         try{
-            const res = await axios.get('http://localhost:8080/creatures');
+            const res = await axios.get('https://mysterious-inlet-01178.herokuapp.com/creatures');
             setCreatures(res.data);
         } catch (e) {
             console.error(e, e.message)
@@ -32,7 +32,7 @@ function Creatures () {
 
     async function createCreature() {
         try {
-            const res = await axios.post('http://localhost:8080/creatures', form);
+            const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/creatures', form);
             setCreatures([...creatures, res.data]);
         } catch(e) {
             console.error(e, e.message);
@@ -53,7 +53,7 @@ function Creatures () {
     async function handleEditSubmit(e) {
         e.preventdefault();
         try {
-            const res = await axios.patch('http://localhost:8080/creatures', selectedCreature);
+            const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/creatures', selectedCreature);
             console.log(res.data);
         } catch (e) {
             console.error(e, e.message);
@@ -62,7 +62,7 @@ function Creatures () {
 
     async function deleteCreature(creatureId) {
         try {
-            const res = await axios.delete('http://localhost:8080/creatures/' + creatureId);
+            const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/creatures/' + creatureId);
             console.log(res.data);
         } catch(e) {
             console.error(e, e.message);

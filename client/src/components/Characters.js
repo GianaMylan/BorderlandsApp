@@ -8,7 +8,7 @@ function Characters () {
 
     async function getCharacters() {
         try{
-            const res = await axios.get('http://localhost:8080/characters');
+            const res = await axios.get('https://mysterious-inlet-01178.herokuapp.com/characters');
             setCharacters(res.data);
         } catch(e) {
             console.error(e, e.message)
@@ -33,7 +33,7 @@ function Characters () {
 
     async function createCharacter() {
         try{
-            const res = await axios.post('http://localhost:8080/characters', form);
+            const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/characters', form);
             setCharacters([...characters, res.data]);
         } catch(e) {
             console.error(e, e.message);
@@ -54,7 +54,7 @@ function Characters () {
     async function handleEditSubmit(e) {
         e.preventdefault();
         try {
-            const res = await axios.patch('http://localhost:8080/characters', selectedCharacter);
+            const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/characters', selectedCharacter);
             console.log(res.data);
             getCharacters();
         } catch(e) {
@@ -64,7 +64,7 @@ function Characters () {
 
     async function deleteCharacter(characterId) {
         try {
-            const res = await axios.delete('http://localhost:8080/characters/' + characterId);
+            const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/characters/' + characterId);
             console.log(res.data);
         } catch(e) {
             console.error (e, e.message);

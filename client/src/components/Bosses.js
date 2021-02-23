@@ -7,7 +7,7 @@ function Bosses () {
 
     async function getBosses() {
         try{
-            const res = await axios.get('http://localhost:8080/bosses');
+            const res = await axios.get('https://mysterious-inlet-01178.herokuapp.com/bosses');
             setBosses(res.data);
         } catch(e) {
             console.error(e, e.message)
@@ -32,7 +32,7 @@ function Bosses () {
 
     async function createBoss() {
         try {
-            const res = await axios.post('htt[://localhost:8080/bosses', form)
+            const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/bosses', form)
             setBosses([...bosses, res.data]);
         } catch(e) {
             console.error(e, e.message);
@@ -53,7 +53,7 @@ function Bosses () {
     async function handleEditSubmit(e) {
         e.preventdefault();
         try {
-            const res = await axios.patch('http://localhost:8080/bosses', selectedBoss);
+            const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/bosses', selectedBoss);
             console.log(res.data);
             getBosses();
         } catch(e) {
@@ -63,7 +63,7 @@ function Bosses () {
 
     async function deleteBoss(bossId) {
         try {
-            const res = await axios.delete('http://localhost:8080/bosses/' + bossId);
+            const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/bosses/' + bossId);
             console.log(res.data);
         } catch(e) {
             console.error (e, e.message);
