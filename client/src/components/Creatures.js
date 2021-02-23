@@ -26,7 +26,7 @@ function Creatures () {
     }
 
     function handleSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         createCreature();
     }
 
@@ -51,7 +51,7 @@ function Creatures () {
     }
 
     async function handleEditSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         try {
             const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/creatures', selectedCreature);
             console.log(res.data);
@@ -99,8 +99,8 @@ function Creatures () {
             </div>
             {
                 selectedCreature && <form
-                onChange={ (e) => handleChange(e)}
-                onSubmit={ (e) => handleSubmit(e)}>
+                onChange={ (e) => handleEditChange(e)}
+                onSubmit={ (e) => handleEditSubmit(e)}>
                     <label> Species:
                         <input type="text" name="species" defaultValue={ selectedCreature.species } />
                     </label>

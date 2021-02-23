@@ -26,7 +26,7 @@ function Bosses () {
     }
 
     function handleSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         createBoss();
     }
 
@@ -51,7 +51,7 @@ function Bosses () {
     }
 
     async function handleEditSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         try {
             const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/bosses', selectedBoss);
             console.log(res.data);
@@ -99,8 +99,8 @@ function Bosses () {
                 </form>
                 {
                     selectedBoss && <form
-                    onChange= { (e) => handleChange(e) }
-                    onSubmit= { (e) => handleSubmit(e) }>
+                    onChange= { (e) => handleEditChange(e) }
+                    onSubmit= { (e) => handleEditSubmit(e) }>
                         <label> Name: 
                             <input type="text" name="name" defaultValue={ selectedBoss.name } />
                         </label>
