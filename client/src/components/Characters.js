@@ -142,11 +142,11 @@ function Character({ character, selectCharacter, deleteCharacter }) {
     return (
         <div className="characters" key={ character.id }>
             <h2 className="full-name-description"> {character.name} </h2>
-            <h3>{ character.gender} <br></br>
-            { character.race } <br></br>
-            { character.planet } <br></br>
-            {character.affiliation}<br></br>
-            { character.skills } </h3>
+            <b> Gender : </b> { character.gender} <br></br>
+            <b> Race: </b>{ character.race } <br></br>
+            <b> Origin Planet: </b>{ character.planet } <br></br>
+            <b> Affiliation:  </b>{ character.affiliation}<br></br>
+            <b> Skill trees: </b>{ character.skills }
             <button className="select-character-button" onClick= { () => selectCharacter(character) }> Edit </button>
             <button className="delete-character-button" onClick={ () => deleteCharacter( character.id) }> Delete </button>
         </div>

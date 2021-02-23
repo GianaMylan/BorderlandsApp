@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10px;
 }
 
 .select-character-button, .delete-character-button {
