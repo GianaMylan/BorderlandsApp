@@ -8,7 +8,7 @@ function Characters () {
 
     async function getCharacters() {
         try{
-            const res = await axios.get('http://localhost:8080/characters');
+            const res = await axios.get('https://mysterious-inlet-01178.herokuapp.com/characters');
             setCharacters(res.data);
         } catch(e) {
             console.error(e, e.message)
@@ -33,7 +33,7 @@ function Characters () {
 
     async function createCharacter() {
         try{
-            const res = await axios.post('http://localhost:8080/characters', form);
+            const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/characters', form);
             setCharacters([...characters, res.data]);
         } catch(e) {
             console.error(e, e.message);
@@ -52,9 +52,9 @@ function Characters () {
     }
 
     async function handleEditSubmit(e) {
-        e.preventdefault();
+        e.preventDefault();
         try {
-            const res = await axios.patch('http://localhost:8080/characters', selectedCharacter);
+            const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/characters', selectedCharacter);
             console.log(res.data);
             getCharacters();
         } catch(e) {
@@ -64,7 +64,7 @@ function Characters () {
 
     async function deleteCharacter(characterId) {
         try {
-            const res = await axios.delete('http://localhost:8080/characters/' + characterId);
+            const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/characters/' + characterId);
             console.log(res.data);
         } catch(e) {
             console.error (e, e.message);
@@ -89,44 +89,44 @@ function Characters () {
                         <input type="text" name="name" />
                     </label>
                     <label> Gender: 
-                        <input type="text" name="name" />
+                        <input type="text" name="gender" />
                     </label>
                     <label> Race: 
-                        <input type="text" name="name" />
+                        <input type="text" name="race" />
                     </label>
                     <label> Planet: 
-                        <input type="text" name="name" />
+                        <input type="text" name="planet" />
                     </label>
                     <label> Affiliation: 
-                        <input type="text" name="name" />
+                        <input type="text" name="affiliation" />
                     </label>
                     <label> Skills: 
-                        <input type="text" name="name" />
+                        <input type="text" name="skills" />
                     </label>
                     <input type="submit" value="Add New"/>
                 </form>
 
                 {
                     selectedCharacter && <form 
-                    onChange= { (e) => handleChange(e) }
-                    onSubmit= { (e) => handleSubmit(e) }>
+                    onChange= { (e) => handleEditChange(e) }
+                    onSubmit= { (e) => handleEditSubmit(e) }>
                         <label> Name: 
                             <input type="text" name="name" defaultValue={ selectedCharacter.name } />
                         </label>
                         <label> Gender: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.gender }/>
+                            <input type="text" name="gender" defaultValue={ selectedCharacter.gender }/>
                         </label>
                         <label> Race: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.race } />
+                            <input type="text" name="race" defaultValue={ selectedCharacter.race } />
                         </label>
                         <label> Planet: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.planet } />
+                            <input type="text" name="planet" defaultValue={ selectedCharacter.planet } />
                         </label>
                         <label> Affiliation: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.affiliation } />
+                            <input type="text" name="affiliation" defaultValue={ selectedCharacter.affiliation } />
                         </label>
                         <label> Skills: 
-                            <input type="text" name="name" defaultValue={ selectedCharacter.skills } />
+                            <input type="text" name="skills" defaultValue={ selectedCharacter.skills } />
                         </label>
                         <input type="submit" value="Patch it Up" />
                     </form> }
