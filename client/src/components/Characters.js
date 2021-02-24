@@ -32,7 +32,6 @@ function Characters () {
     }
 
     async function createCharacter() {
-        e.preventDefault();
         try{
             const res = await axios.post('https://mysterious-inlet-01178.herokuapp.com/characters', form);
             setCharacters([...characters, res.data]);
@@ -64,7 +63,6 @@ function Characters () {
     }
 
     async function deleteCharacter(characterId) {
-        e.preventDefault();
         try {
             const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/characters/' + characterId);
             console.log(res.data);
