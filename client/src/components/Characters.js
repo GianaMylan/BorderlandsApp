@@ -104,7 +104,7 @@ function Characters () {
                     <label> Skills: 
                         <input type="text" name="skills" />
                     </label>
-                    <input type="submit" value="Add New"/>
+                    <input className="button" type="submit" value="Add New"/>
                 </form>
                 
                 {
@@ -132,7 +132,7 @@ function Characters () {
                         <label> Skills: 
                             <input type="text" name="skills" defaultValue={ selectedCharacter.skills } />
                         </label>
-                        <input type="submit" value="Patch it Up" />
+                        <input className="button" type="submit" value="Patch it Up" />
                     </form> }
             </div>
             <div className="footer">
