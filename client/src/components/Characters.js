@@ -81,10 +81,11 @@ function Characters () {
             </div>
 
             <div>
-                <h2> Add a playable character </h2>
-                <form className="newCharacterForm"
+                
+                <form className="newForm"
                 onChange={ (e) => handleChange(e) }
                 onSubmit= { (e) => handleSubmit(e) }>
+                    <h2> Add a new playable Character : </h2>
                     <label> Name: 
                         <input type="text" name="name" />
                     </label>
@@ -105,11 +106,14 @@ function Characters () {
                     </label>
                     <input type="submit" value="Add New"/>
                 </form>
-
+                
                 {
+                    
                     selectedCharacter && <form 
                     onChange= { (e) => handleEditChange(e) }
-                    onSubmit= { (e) => handleEditSubmit(e) }>
+                    onSubmit= { (e) => handleEditSubmit(e) }
+                    className="editForm">
+                        <h3> Edit Selected : </h3>
                         <label> Name: 
                             <input type="text" name="name" defaultValue={ selectedCharacter.name } />
                         </label>
@@ -140,15 +144,20 @@ function Characters () {
 
 function Character({ character, selectCharacter, deleteCharacter }) {
     return (
-        <div className="characters" key={ character.id }>
-            <h2 className="full-name-description"> {character.name} </h2>
-            <b> Gender : </b> { character.gender} <br></br>
-            <b> Race: </b>{ character.race } <br></br>
-            <b> Origin Planet: </b>{ character.planet } <br></br>
-            <b> Affiliation:  </b>{ character.affiliation}<br></br>
-            <b> Skill trees: </b>{ character.skills }
-            <button className="select-button" onClick= { () => selectCharacter(character) }> Edit </button>
-            <button className="delete-button" onClick={ () => deleteCharacter( character.id) }> Delete </button>
+        <div className="parent">    
+            <div className="child" key={ character.id }>
+                <div className="childInfo">
+                    { character.image }
+                    <h2 className="full-name-description"> {character.name} </h2>
+                    <b> Gender : </b> { character.gender} <br></br>
+                    <b> Race: </b>{ character.race } <br></br>
+                    <b> Origin Planet: </b>{ character.planet } <br></br>
+                    <b> Affiliation:  </b>{ character.affiliation}<br></br>
+                    <b> Skill trees: </b>{ character.skills }
+                </div>
+                <button className="select-button" onClick= { () => selectCharacter(character) }> Edit </button>
+                <button className="delete-button" onClick={ () => deleteCharacter( character.id) }> Delete </button>
+            </div>
         </div>
     )
 }

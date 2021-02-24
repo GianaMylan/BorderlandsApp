@@ -13,3 +13,8 @@ This site could be helpful to beginner players to experienced streamers.
 
 ### Wireframes
 
+
+
+### Deploying
+surge link: http://borderlands-app.surge.sh/
+github link : https://github.com/GianaMylan/BorderlandsApp 

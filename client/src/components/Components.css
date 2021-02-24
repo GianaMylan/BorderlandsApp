@@ -1,11 +1,22 @@
-.characters {
+.container {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
+.child {
+    border: white 2px solid;
+    width: fit-content;
+}
+
+.childInfo {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
 .select-button, .delete-button {
-    background-color: aqua;
+    background-color: rgb(235, 203, 24);
     border-radius: .25rem;
     border: double 2px rgb(255, 255, 255);
     color: black;
@@ -14,4 +25,12 @@
     width: 100px;
     cursor: pointer;
     margin: 3px;
+}
+
+.newForm, .editForm {
+    border: double 10px rgb(95, 2, 2);
+    display: grid;
+    grid: center;
+    justify-items: center;
+    width: fit-content;
 }

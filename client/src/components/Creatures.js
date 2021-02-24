@@ -80,7 +80,7 @@ function Creatures () {
 
             <div>
                 <h2> Add a Creature:  </h2>
-                <form className="newCreatureForm"
+                <form className="newForm"
                 onChange={ (e) => handleChange(e) }
                 onSubmit={ (e) => handleSubmit(e) }>
                     <label>
@@ -100,7 +100,8 @@ function Creatures () {
             {
                 selectedCreature && <form
                 onChange={ (e) => handleEditChange(e)}
-                onSubmit={ (e) => handleEditSubmit(e)}>
+                onSubmit={ (e) => handleEditSubmit(e)}
+                className="editForm">
                     <label> Species:
                         <input type="text" name="species" defaultValue={ selectedCreature.species } />
                     </label>

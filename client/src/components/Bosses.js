@@ -81,7 +81,7 @@ function Bosses () {
 
             <div>
                 <h2> Add a boss character</h2>
-                <form className="newBossForm"
+                <form className="newForm"
                 onChange={ (e) => handleChange(e) }
                 onSubmit={ (e) => handleSubmit(e) }>
                     <label> Name: 
@@ -101,7 +101,8 @@ function Bosses () {
                 {
                     selectedBoss && <form
                     onChange= { (e) => handleEditChange(e) }
-                    onSubmit= { (e) => handleEditSubmit(e) }>
+                    onSubmit= { (e) => handleEditSubmit(e) }
+                    className="editForm">
                         <label> Name: 
                             <input type="text" name="name" defaultValue={ selectedBoss.name } />
                         </label>
