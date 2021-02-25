@@ -1,11 +1,15 @@
 .container {
     display: inline-flex;
     flex-direction: row;
+    justify-content: center;
+    align-content: center;
 }
 
 .child {
     border: white 2px solid;
     width: fit-content;
+    justify-content: center;
+    align-content: center;
 }
 
 .childInfo {

@@ -95,6 +95,7 @@ function Creatures () {
                         Do they have elemental Variety? 
                         <input type="text" name="name" />
                     </label>
+                    <input className="button" type="submit" value="Add New"/>
                 </form>
             </div>
             {
@@ -113,6 +114,7 @@ function Creatures () {
                         Do they have elemental Variety? 
                         <input type="text" name="name" />
                     </label>
+                    <input className="button" type="submit" value="Patch it"/>
                 </form>
             }
             <div className="footer">
