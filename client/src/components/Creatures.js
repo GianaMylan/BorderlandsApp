@@ -108,11 +108,11 @@ function Creatures () {
                     </label>
                     <label>
                         Are there Badass Versions? 
-                        <input type="text" name="name" />
+                        <input type="text" name="badasses" defaultValue={ selectedCreature.badasses } />
                     </label>
                     <label>
                         Do they have elemental Variety? 
-                        <input type="text" name="name" />
+                        <input type="text" name="elemental_variety" defaultValue={ selectedCreature.elemental_variants }/>
                     </label>
                     <input className="button" type="submit" value="Patch it"/>
                 </form>
