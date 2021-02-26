@@ -47,7 +47,7 @@ function Creatures () {
 
     function handleEditChange(e) {
         const { name, value } = e.target;
-        setSelectedCreature({...setSelectedCreature, [name]: value });
+        setSelectedCreature({...selectedCreature, [name]: value });
     }
 
     async function handleEditSubmit(e) {
@@ -55,6 +55,7 @@ function Creatures () {
         try {
             const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/creatures', selectedCreature);
             console.log(res.data);
+            getCreatures();
         } catch (e) {
             console.error(e, e.message);
         }
