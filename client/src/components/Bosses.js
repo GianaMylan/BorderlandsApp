@@ -63,6 +63,7 @@ function Bosses () {
 
     async function deleteBoss(bossId) {
         try {
+            console.log(bossId);
             const res = await axios.delete('https://mysterious-inlet-01178.herokuapp.com/bosses/' + bossId);
             console.log(res.data);
         } catch(e) {
