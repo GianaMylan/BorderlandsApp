@@ -1,20 +1,21 @@
 .container {
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
 }
 
 .child {
     border: white 2px solid;
     width: fit-content;
-    justify-content: center;
+    justify-self: center;
     align-content: center;
 }
 
 .childInfo {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .select-button, .delete-button {

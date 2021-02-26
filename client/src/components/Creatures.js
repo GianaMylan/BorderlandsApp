@@ -71,7 +71,7 @@ function Creatures () {
 
     return (
         <div>  
-            <div> Creatures</div>
+            <div className="pageTitle"> Creatures </div>
             <div className="render" key={creatures}>
                 {
                     creatures && creatures.map(creature => < Creature creature={ creature } selectCreature= { selectCreature } deleteCreature={ deleteCreature } />)
@@ -126,12 +126,16 @@ function Creatures () {
 
 function Creature ({ creature, selectCreature, deleteCreature }) {
     return(
-        <div className="characters" > 
-            <h2 className="cratures" key={ creature.id }> { creature.species } </h2>
-            <b> Badass Variants? </b> { creature.badasses } <br></br>
-            <b> Elemental Variants? </b> {creature.elemental_variants } <br></br>
-            <button className="select-button" onClick= { () => selectCreature(creature) }> Edit </button>
-            <button className="delete-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>
+        <div className="parent">
+            <div className="child" key={ creature.id } > 
+                <div className="childInfo">
+                <h2 key={ creature.id }> { creature.species } </h2>
+                <b> Badass Variants? </b> { creature.badasses } <br></br>
+                <b> Elemental Variants? </b> {creature.elemental_variants } <br></br>
+                </div>
+                <button className="select-button" onClick= { () => selectCreature(creature) }> Edit </button>
+                <button className="delete-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>
+            </div>
         </div>
     )
 }
