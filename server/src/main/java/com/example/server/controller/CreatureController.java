@@ -21,7 +21,7 @@ public class CreatureController {
         return creatureService.getCreatures();
     }
 
-    @GetMapping ("/{id}")
+    @GetMapping ("/{creature_id}")
     public Creatures getCreatureById(@PathVariable Long creature_id) {
         return creatureService.findCreatureById(creature_id);
     }

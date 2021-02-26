@@ -89,11 +89,11 @@ function Creatures () {
                     </label>
                     <label>
                         Are there Badass Versions? 
-                        <input type="text" name="badass" />
+                        <input type="text" name="badasses" />
                     </label>
                     <label>
                         Do they have elemental Variety? 
-                        <input type="text" name="elemental_variety" />
+                        <input type="text" name="elemental_variants" />
                     </label>
                     <input className="button" type="submit" value="Add New"/>
                 </form>
@@ -112,7 +112,7 @@ function Creatures () {
                     </label>
                     <label>
                         Do they have elemental Variety? 
-                        <input type="text" name="elemental_variety" defaultValue={ selectedCreature.elemental_variants }/>
+                        <input type="text" name="elemental_variants" defaultValue={ selectedCreature.elemental_variants }/>
                     </label>
                     <input className="button" type="submit" value="Patch it"/>
                 </form>
@@ -127,14 +127,14 @@ function Creatures () {
 function Creature ({ creature, selectCreature, deleteCreature }) {
     return(
         <div className="parent">
-            <div className="child" key={ creature.id } > 
+            <div className="child" key={ creature.creawture_id } > 
                 <div className="childInfo">
                 <h2 key={ creature.id }> { creature.species } </h2>
                 <b> Badass Variants? </b> { creature.badasses ? " yes it does" : " no it doesnt" } <br></br>
                 <b> Elemental Variants? </b> {creature.elemental_variants ? "yes it does" : "no it doesnt" } <br></br>
                 </div>
                 <button className="select-button" onClick= { () => selectCreature(creature) }> Edit </button>
-                <button className="delete-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>
+                <button className="delete-button" onClick={ () => deleteCreature( creature.creature_id) }> Delete </button>
             </div>
         </div>
     )
