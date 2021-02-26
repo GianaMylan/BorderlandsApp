@@ -89,11 +89,11 @@ function Creatures () {
                     </label>
                     <label>
                         Are there Badass Versions? 
-                        <input type="text" name="name" />
+                        <input type="text" name="badass" />
                     </label>
                     <label>
                         Do they have elemental Variety? 
-                        <input type="text" name="name" />
+                        <input type="text" name="elemental_variety" />
                     </label>
                     <input className="button" type="submit" value="Add New"/>
                 </form>
@@ -130,8 +130,8 @@ function Creature ({ creature, selectCreature, deleteCreature }) {
             <div className="child" key={ creature.id } > 
                 <div className="childInfo">
                 <h2 key={ creature.id }> { creature.species } </h2>
-                <b> Badass Variants? </b> { creature.badasses } <br></br>
-                <b> Elemental Variants? </b> {creature.elemental_variants } <br></br>
+                <b> Badass Variants? </b> { creature.badasses ? " yes it does" : " no it doesnt" } <br></br>
+                <b> Elemental Variants? </b> {creature.elemental_variants ? "yes it does" : "no it doesnt" } <br></br>
                 </div>
                 <button className="select-button" onClick= { () => selectCreature(creature) }> Edit </button>
                 <button className="delete-button" onClick={ () => deleteCreature( creature.id) }> Delete </button>

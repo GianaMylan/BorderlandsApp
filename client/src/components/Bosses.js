@@ -88,13 +88,13 @@ function Bosses () {
                         <input type="text" name="name" />
                     </label>
                     <label> Gender: 
-                        <input type="text" name="name" />
+                        <input type="text" name="gender" />
                     </label>
                     <label> Race: 
-                        <input type="text" name="name" />
+                        <input type="text" name="race" />
                     </label>
                     <label> Affiliation: 
-                        <input type="text" name="name" />
+                        <input type="text" name="affiliation" />
                     </label>
                     <input type="submit" value="Add New" />                    
                 </form>
@@ -107,13 +107,13 @@ function Bosses () {
                             <input type="text" name="name" defaultValue={ selectedBoss.name } />
                         </label>
                         <label> Gender: 
-                            <input type="text" name="name" defaultValue={ selectedBoss.gender } />
+                            <input type="text" name="gender" defaultValue={ selectedBoss.gender } />
                         </label>
                         <label> Race: 
-                            <input type="text" name="name" defaultValue={ selectedBoss.race } />
+                            <input type="text" name="race" defaultValue={ selectedBoss.race } />
                         </label>
                         <label> Affiliation: 
-                            <input type="text" name="name" defaultValue={ selectedBoss.affiliation } />
+                            <input type="text" name="affiliation" defaultValue={ selectedBoss.affiliation } />
                         </label>
                         <input type="submit" value="Patch it up" />
                     </form>   }
@@ -129,7 +129,7 @@ function Boss ({ bosses, selectBoss, deleteBoss }) {
     return(
         <div className="parent">
             <div className="child">
-                <div className="childInfo" key={ bosses.id}>
+                <div className="childInfo" key={ bosses}>
                     <h2> { bosses.name }</h2>
                     <b> Gender: </b> { bosses.gender } <br></br>
                     <b> Race: </b> {bosses.race } <br></br>
