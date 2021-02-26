@@ -30,7 +30,7 @@ public class CharacterController {
         return characterService.createCharacter(characters);
     }
 
-    @PatchMapping("/{characterId}")
+    @PatchMapping
     public Characters updateCharacter(@PathVariable Characters characters) {
         return characterService.updateCharacter(characters);
     } // need to make sure the IDs will not change

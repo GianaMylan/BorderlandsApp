@@ -129,14 +129,14 @@ function Boss ({ bosses, selectBoss, deleteBoss }) {
     return(
         <div className="parent">
             <div className="child">
-                <div className="childInfo" key={ bosses}>
+                <div className="childInfo" key={ bosses.boss_id}>
                     <h2> { bosses.name }</h2>
                     <b> Gender: </b> { bosses.gender } <br></br>
                     <b> Race: </b> {bosses.race } <br></br>
                     <b> Affiliation </b> {bosses.affiliation} <br></br>
                 </div>
                     <button className="select-button" onClick= { () => selectBoss(bosses) }> Edit </button>
-                    <button className="delete-button" onClick={ () => deleteBoss( bosses.id) }> Delete </button>
+                    <button className="delete-button" onClick={ () => deleteBoss( bosses.boss_id) }> Delete </button>
             </div>
         </div>
     )

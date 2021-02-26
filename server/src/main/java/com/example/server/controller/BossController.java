@@ -29,7 +29,7 @@ public class BossController {
         return bossService.createBoss(bosses);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping
     public Bosses updateBoss(@RequestBody Bosses bosses) {
         return bossService.updateBoss(bosses);
     }

@@ -31,7 +31,7 @@ public class CreatureController {
         return creatureService.createCreature(creatures);
     }
 
-    @PatchMapping("/{id}")
+    @PatchMapping
     public Creatures updateCreature(@RequestBody Creatures creatures) {
         return creatureService.updateCreature(creatures);
     } // need to make sure the IDs will not change
