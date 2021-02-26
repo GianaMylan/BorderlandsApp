@@ -53,7 +53,7 @@ function Bosses () {
     async function handleEditSubmit(e) {
         e.preventDefault();
         try {
-            const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/bosses', selectedBoss);
+            const res = await axios.patch('https://mysterious-inlet-01178.herokuapp.com/bosses/', selectedBoss);
             console.log(res.data);
             getBosses();
         } catch(e) {
